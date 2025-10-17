@@ -28,115 +28,475 @@ Publish the website in the LocalHost.
 ## PROGRAM :
 ```
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dribbble Clone</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    .hero {
-      background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f') no-repeat center center/cover;
-      color: white;
-      height: 80vh;
-      display: flex;
-      align-items: center;
-      text-align: center;
-    }
-    .overlay {
-      background: rgba(0,0,0,0.5);
-      width: 100%;
-      height: 100%;
-      padding: 100px 0;
-    }
-    .card img { 
-      height: 200px;
-      object-fit: cover;
-    }
-  </style>
+    <title>Administration - HOTSPOT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: lightgray;
+        }
+        nav {
+            background-color: darkslategray;
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+        }
+        header {
+            text-align: center;
+            background-color: lightsteelblue;
+            padding: 20px;
+        }
+        .admin-section {
+            padding: 30px;
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .admin-section h2 {
+            text-align: center;
+            color: darkslateblue;
+            margin-bottom: 20px;
+        }
+        .admin-team {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .team-member {
+            background-color: lightblue;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            width: 200px;
+        }
+        .team-member img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .admin-login {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .admin-login input {
+            padding: 10px;
+            margin: 10px 5px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .admin-login button {
+            padding: 10px 20px;
+            background-color: darkslateblue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .admin-login button:hover {
+            background-color: slateblue;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold text-danger" href="#">Dribbble Clone</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#">Explore</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Designers</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
-          <li class="nav-item"><a class="btn btn-danger text-white ms-2" href="#">Sign Up</a></li>
-        </ul>
-      </div>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="adminstration.html">Administration</a>
+    <a href="contact.html">Contact Us</a>
+</nav>
+
+<header>
+    <h1>HOTSPOT Administration</h1>
+</header>
+
+<div class="admin-section">
+    <h2>Meet the Team</h2>
+    <div class="admin-team">
+        <div class="team-member">
+            <h3>John Doe</h3>
+            <p>Manager</p>
+        </div>
+        <div class="team-member">
+            <h3>Jane Smith</h3>
+            <p>Assistant Manager</p>
+        </div>
+        <div class="team-member">
+            <h3>Emily Johnson</h3>
+            <p>HR Head</p>
+        </div>
     </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section class="hero mt-5">
-    <div class="overlay">
-      <div class="container">
-        <h1 class="display-4 fw-bold">Discover the World’s Top Designers</h1>
-        <p class="lead mb-4">Dribbble is the leading platform for showcasing creative work.</p>
-        <div class="input-group mb-3 w-50 mx-auto">
-          <input type="text" class="form-control" placeholder="Search for designers or projects...">
-          <button class="btn btn-danger">Search</button>
-        </div>
-      </div>
+    <div class="admin-login">
+        <h2>Admin Login</h2>
+        <form>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
     </div>
-  </section>
+</div>
 
-  <!-- Design Cards -->
-  <section class="py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center mb-4">Explore Popular Shots</h2>
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <div class="card shadow-sm">
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Creative Dashboard UI</h5>
-              <p class="card-text text-muted">by Jane Doe</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card shadow-sm">
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Modern App Interface</h5>
-              <p class="card-text text-muted">by John Smith</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card shadow-sm">
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">E-commerce UI Kit</h5>
-              <p class="card-text text-muted">by Emily Johnson</p>
-            </div>
-          </div>
-        </div>
-      </div>
+</body>
+</html>
+
+contact.html
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us - HOTSPOT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        nav {
+            background-color: grey;
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+        }
+        header {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+        }
+        .contact-section {
+            padding: 30px;
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .contact-section form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .contact-section input, .contact-section textarea, .contact-section button {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid whitesmoke;
+            border-radius: 5px;
+        }
+        .contact-section textarea {
+            resize: none;
+            height: 100px;
+        }
+        .contact-section button {
+            background-color: #4a4a4a;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="adminstration.html">Administration</a>
+    <a href="contact.html">Contact Us</a>
+</nav>
+
+<header>
+    <h1>Contact Us</h1>
+</header>
+
+<div class="contact-section">
+    <h2>We'd Love to Hear from You!</h2>
+    <form>
+        <input type="text" name="name" placeholder="Your Full Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Your Phone Number (optional)">
+        <textarea name="message" placeholder="Your Message..." required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+</body>
+</html>
+
+index.html
+
+<!DOCTYPE html>
+<html>
+<head>=
+    <title>PALMAZA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        header {
+            background-color: wheat;
+            text-align: center;
+            padding: 20px;
+        }
+        header img {
+            width: 50px;
+        }
+        nav {
+            background-color: grey;
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+        }
+        .banner {
+            text-align: right;
+            background-image: url('banner.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 50px;
+        }
+        .banner h2 {
+            margin: 0;
+        }
+        .banner p {
+            margin-top: 10px;
+        }
+        .sections {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            gap: 10px;
+        }
+        .section {
+            background-color: wheat;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            width: 30%;
+        }
+        .section img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        footer {
+            text-align: center;
+            background-color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        footer a {
+            text-decoration: none;
+            color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="HOTSPOT.png" alt="HOTSPOT Logo"> 
+    <h1>HOTSPOT</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="adminstration.html">Administration</a>
+    <a href="contact.html">Contact Us</a>
+</nav>
+
+<div class="banner">
+    <h2>30% Off This Weekend</h2>
+    <p>Don't miss out on our special offer! Visit us this weekend and enjoy delicious meals at discounted prices.</p>
+</div>
+
+<div class="sections">
+    <div class="section">
+        <img src="menu.png" alt="Menu"> 
+        <h3>Our New Menu</h3>
+        <p>Explore a variety of mouthwatering dishes crafted to satisfy every taste. From savory appetizers to hearty main courses, there's something for everyone.</p>
+        <a href="menu.html">See our new menu</a>
     </div>
-  </section>
+    <div class="section">
+        <img src="table.png" alt="Book a Table"> 
+        <h3>Reserve Your Spot</h3>
+        <p>Enjoy an unforgettable dining experience at HOTSPOT. Book your table today and treat yourself to a fantastic meal in a cozy ambiance.</p>
+        <a href="booktable.html">Book your table now</a>
+    </div>
+    <div class="section">
+        <img src="waiter.png" alt="Opening Hours"> 
+        <h3>Opening Hours</h3>
+        <p>
+            Mon - Fri: 2pm - 10pm<br>
+            Sat: 2pm - 11pm<br>
+            Sun: 2pm - 9pm
+        </p>
+    </div>
+</div>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-4">
-    <p class="mb-0">&copy; 2025 Dribbble Clone | Designed by Jeno</p>
-  </footer>
+<footer>
+    <p>Designed and Developed by Thirunavukkarasu<br> 212224220117</p>
+</footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+menu.html
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: lightgray;
+        }
+        nav {
+            background-color: darkslategray;
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+        }
+        header {
+            text-align: center;
+            background-color: lightsteelblue;
+            padding: 20px;
+        }
+        .menu-section {
+            padding: 30px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .menu-title {
+            text-align: center;
+            color: darkslateblue;
+            margin-bottom: 20px;
+        }
+        .menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .menu-item {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            padding: 15px;
+            width: 250px;
+        }
+        .menu-item img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .menu-item h3 {
+            color: darkslateblue;
+            margin: 10px 0;
+        }
+        .menu-item p {
+            color: gray;
+            font-size: 14px;
+        }
+        .menu-item span {
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+            color: darkslategray;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="adminstration.html">Administration</a>
+    <a href="contact.html">Contact Us</a>
+</nav>
+
+<header>
+    <h1>Our Menu</h1>
+</header>
+
+<div class="menu-section">
+    <h2 class="menu-title">Explore Our Delicious Dishes</h2>
+    <div class="menu-items">
+        <div class="menu-item">
+            <img src="burger.png" alt="Dish 1">
+            <h3>Classic Burger</h3>
+            <p>A juicy beef patty with fresh lettuce, tomatoes, and cheese in a sesame seed bun.</p>
+            <span>Rs. 120</span>
+        </div>
+        <div class="menu-item">
+            <img src="pizza.png" alt="Dish 2">
+            <h3>Margherita Pizza</h3>
+            <p>Freshly baked pizza topped with mozzarella, tomatoes, and basil.</p>
+            <span>Rs. 180</span>
+        </div>
+        <div class="menu-item">
+            <img src="salad.png" alt="Dish 3">
+            <h3>Caesar Salad</h3>
+            <p>Crisp romaine lettuce tossed with creamy Caesar dressing, croutons, and Parmesan.</p>
+            <span>Rs. 160</span>
+        </div>
+        <div class="menu-item">
+            <img src="salmon.png" alt="Dish 4">
+            <h3>Grilled Salmon</h3>
+            <p>Perfectly grilled salmon served with steamed vegetables and a lemon butter sauce.</p>
+            <span>Rs. 340</span>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
 ```
-
 ## OUTPUT:
-![WhatsApp Image 2025-10-17 at 14 54 49_251e0387](https://github.com/user-attachments/assets/cd670666-cb38-49d9-a4ce-8c0a968eac4c)
+![WhatsApp Image 2025-10-17 at 15 00 21_effadd10](https://github.com/user-attachments/assets/7d61f881-6d92-4292-9a0a-08c86bf35157)
+![WhatsApp Image 2025-10-17 at 15 00 21_e150e8a2](https://github.com/user-attachments/assets/d3f3b1fd-65c5-468f-86be-ac07ced759b8)
+![WhatsApp Image 2025-10-17 at 15 00 21_e7b510d3](https://github.com/user-attachments/assets/2c886aa0-5676-4eab-a865-f7e9c872903e)
+![WhatsApp Image 2025-10-17 at 15 00 22_c7dc852b](https://github.com/user-attachments/assets/616246bb-23bc-409f-a104-d38353749bf5)
+
 
 
 ## RESULT:
