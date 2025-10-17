@@ -1,4 +1,4 @@
-![WhatsApp Image 2025-10-17 at 14 54 49_0beefb6a](https://github.com/user-attachments/assets/e377ddb9-0348-4dc8-8457-c675cccdbdbd)![WhatsApp Image 2025-10-17 at 14 54 49_0beefb6a](https://github.com/user-attachments/assets/092d0125-77c4-4502-ae48-5cc259e27427)# Project Responsive Web Design using Bootstrap
+
 ## Date:17/10/25
 
 ## AIM:
